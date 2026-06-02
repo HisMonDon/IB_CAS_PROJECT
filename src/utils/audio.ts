@@ -19,6 +19,7 @@ class SoundEngine {
     }
   }
 
+
   // Play satisfying crisp click/pop sound for bubble wrap
   playPop(pitchModifier = 1.0) {
     try {
@@ -216,7 +217,7 @@ class SoundEngine {
         this.ambientNoiseNode = filter;
         this.ambientGain = gain;
         this.isAmbientPlaying = true;
-        
+
         // Save source & lfo to stop them later
         (this as any)._waveSource = source;
         (this as any)._waveLfo = lfo;
@@ -233,7 +234,7 @@ class SoundEngine {
             try {
               if (source) source.stop();
               if (lfo) lfo.stop();
-            } catch (err) {}
+            } catch (err) { }
           }, 1100);
         }
         this.isAmbientPlaying = false;
