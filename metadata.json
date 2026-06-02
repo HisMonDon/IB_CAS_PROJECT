@@ -1,0 +1,6 @@
+{
+  "name": "MindSpace",
+  "description": "MindSpace is an IB CAS project providing calming sensory playgrounds like digital slime, a Zen sand garden, virtual bubble wrap, fluid color play, and pebble stacking to help students reset.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
