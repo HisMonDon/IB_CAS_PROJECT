@@ -27,6 +27,9 @@ import {
 import { useStore, TabType } from '../store';
 import { audio } from '../utils/audio';
 
+const publicAsset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 export default function Dashboard() {
   const {
     visitsCount,
@@ -496,7 +499,7 @@ export default function Dashboard() {
               id: 'chenyu_lu',
               name: 'Chenyu Lu',
               role: 'Lead Developer & Coder',
-              img: '/portrait_images/chenyu_lu.jpg',
+              img: publicAsset('/portrait_images/chenyu_lu.jpg'),
               initials: 'CL',
               gradient: 'from-indigo-900/40 to-indigo-950/90',
               text: 'text-indigo-400',
@@ -507,7 +510,7 @@ export default function Dashboard() {
               id: 'benjamin_lam',
               name: 'Benjamin Lam',
               role: 'Psychological Researcher',
-              img: '/portrait_images/benjamin_lam.jpg',
+              img: publicAsset('/portrait_images/benjamin_lam.jpg'),
               initials: 'BL',
               gradient: 'from-purple-900/40 to-purple-950/90',
               text: 'text-purple-400',
@@ -517,7 +520,7 @@ export default function Dashboard() {
               id: 'ken_zhong',
               name: 'Ken Zhong',
               role: 'Playground Thinker (came up with slime, zen sand, e.t.c)',
-              img: '/portrait_images/ken_zhong.jpg',
+              img: publicAsset('/portrait_images/ken_zhong.jpg'),
               initials: 'KZ',
               gradient: 'from-amber-900/40 to-amber-950/90',
               text: 'text-amber-400',
@@ -527,7 +530,7 @@ export default function Dashboard() {
               id: 'oliver_miao',
               name: 'Oliver Miao',
               role: 'Code Reviewer/Debugger',
-              img: '/portrait_images/oliver_miao.jpg',
+              img: publicAsset('/portrait_images/oliver_miao.jpg'),
               initials: 'OM',
               gradient: 'from-emerald-900/40 to-emerald-950/90',
               text: 'text-emerald-400',
@@ -537,7 +540,7 @@ export default function Dashboard() {
               id: 'bryan_he',
               name: 'Bryan He',
               role: 'Playground Thinker (came up with slime, zen sand, e.t.c)',
-              img: '/portrait_images/bryan_he.jpg',
+              img: publicAsset('/portrait_images/bryan_he.jpg'),
               initials: 'BH',
               gradient: 'from-pink-900/40 to-pink-950/90',
               text: 'text-pink-400',
