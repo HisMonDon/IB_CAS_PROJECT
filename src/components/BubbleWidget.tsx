@@ -35,7 +35,7 @@ const BUBBLE_COLORS = [
     coreColor: 'rgba(2, 132, 199, 0.35)', 
     borderClass: 'border-sky-400/30', 
     shadowColor: 'rgba(2, 132, 199, 0.12)', 
-    textClass: 'text-sky-450', 
+    textClass: 'text-sky-400', 
     bgClass: 'bg-sky-500/10' 
   },
   { 
@@ -57,7 +57,7 @@ const BUBBLE_COLORS = [
     coreColor: 'rgba(147, 51, 234, 0.35)', 
     borderClass: 'border-purple-400/30', 
     shadowColor: 'rgba(147, 51, 234, 0.12)', 
-    textClass: 'text-purple-405', 
+    textClass: 'text-purple-400', 
     bgClass: 'bg-purple-500/10' 
   },
   { 
@@ -184,7 +184,7 @@ export default function BubbleWidget() {
       {/* Bubble Wrap sheet workspace */}
       <div className="relative p-6 bg-slate-950 border-x border-b border-slate-900 rounded-b-2xl overflow-y-auto max-h-[380px] lg:max-h-[440px] flex items-center justify-center">
         <div 
-          className="grid gap-2 border border-slate-900/60 p-4 rounded-2xl bg-slate-905 select-none touch-none"
+          className="grid gap-2 border border-slate-900/60 p-4 rounded-2xl bg-slate-900 select-none touch-none"
           style={{ gridTemplateColumns: `repeat(${gridSize.cols}, minmax(0, 1fr))` }}
         >
           {bubbles.map(bubble => (

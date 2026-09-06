@@ -439,7 +439,7 @@ export default function SandWidget() {
         />
 
         {/* Sand Garden instructions Overlay */}
-        <div className="absolute bottom-4 left-4 flex gap-1 items-center px-2 py-0.5 pointer-events-none bg-slate-950/75 rounded text-[9px] text-slate-450 tracking-wide select-none uppercase font-mono border border-slate-900">
+        <div className="absolute bottom-4 left-4 flex gap-1 items-center px-2 py-0.5 pointer-events-none bg-slate-950/75 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-slate-900">
           <Info className="w-3.5 h-3.5 text-amber-550" />
           Click Stone to drag | Drag sand to rake grooves | Waves play synthesized sea wind &amp; water sounds
         </div>

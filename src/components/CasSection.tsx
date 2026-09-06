@@ -110,7 +110,7 @@ export default function CasSection() {
                   <select
                     value={moodBefore}
                     onChange={(e) => setMoodBefore(e.target.value)}
-                    className="w-full p-2 bg-neutral-900 border border-neutral-850 rounded-lg text-xs font-medium text-neutral-200 focus:outline-none focus:border-indigo-500"
+                    className="w-full p-2 bg-neutral-900 border border-neutral-800 rounded-lg text-xs font-medium text-neutral-200 focus:outline-none focus:border-indigo-500"
                   >
                     <option value="Stressed">Stressed</option>
                     <option value="Overwhelmed">Overwhelmed</option>
@@ -129,7 +129,7 @@ export default function CasSection() {
                   <select
                     value={moodAfter}
                     onChange={(e) => setMoodAfter(e.target.value)}
-                    className="w-full p-2 bg-neutral-900 border border-neutral-850 rounded-lg text-xs font-medium text-neutral-200 focus:outline-none focus:border-indigo-500"
+                    className="w-full p-2 bg-neutral-900 border border-neutral-800 rounded-lg text-xs font-medium text-neutral-200 focus:outline-none focus:border-indigo-500"
                   >
                     <option value="Fine">Fine / Relieved</option>
                     <option value="Calm">Calm &amp; Cozy</option>
@@ -149,7 +149,7 @@ export default function CasSection() {
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="What sensory actions helped? Write structural learning takeaways (e.g., 'Stacking pebbles required immense patience, allowing me to fully dissociate from the TOK essay outline.')"
-                  className="w-full p-3 bg-neutral-900 border border-neutral-850 rounded-lg text-xs font-sans text-neutral-200 focus:outline-none focus:border-indigo-500 leading-relaxed resize-none placeholder:text-neutral-600"
+                  className="w-full p-3 bg-neutral-900 border border-neutral-800 rounded-lg text-xs font-sans text-neutral-200 focus:outline-none focus:border-indigo-500 leading-relaxed resize-none placeholder:text-neutral-600"
                   required
                 />
               </div>
@@ -180,7 +180,7 @@ export default function CasSection() {
             reflections.map((ref) => (
               <div 
                 key={ref.id}
-                className="p-4 bg-neutral-950/60 border border-neutral-850 rounded-xl flex items-start justify-between gap-4 relative group"
+                className="p-4 bg-neutral-950/60 border border-neutral-800 rounded-xl flex items-start justify-between gap-4 relative group"
               >
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-wrap items-center gap-2">

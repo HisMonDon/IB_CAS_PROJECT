@@ -483,8 +483,8 @@ export default function PebbleWidget() {
             </div>
             <span className="text-xs font-bold text-slate-100 font-mono">{stability}%</span>
           </div>
-          <span className="text-[9px] text-slate-450 font-sans leading-none mt-1">
-            Current Count: <strong className="text-slate-250 font-mono">{stackedStones.length} stones</strong>
+          <span className="text-[9px] text-slate-400 font-sans leading-none mt-1">
+            Current Count: <strong className="text-slate-200 font-mono">{stackedStones.length} stones</strong>
           </span>
         </div>
 
@@ -492,7 +492,7 @@ export default function PebbleWidget() {
         {heldStone && !isFalling && (
           <button
             onClick={triggerDirectDrop}
-            className="absolute bottom-16 px-5 py-2.5 bg-indigo-650 hover:bg-indigo-600 text-white rounded-full text-xs font-bold border border-indigo-500 shadow-xl flex items-center gap-2 cursor-pointer transition-all hover:scale-103 animate-bounce"
+            className="absolute bottom-16 px-5 py-2.5 bg-indigo-700 hover:bg-indigo-600 text-white rounded-full text-xs font-bold border border-indigo-500 shadow-xl flex items-center gap-2 cursor-pointer transition-all hover:scale-105 animate-bounce"
           >
             <ArrowDown className="w-4 h-4" /> Drop Active Pebble
           </button>

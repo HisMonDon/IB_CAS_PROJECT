@@ -307,7 +307,7 @@ export default function FluidWidget() {
                 className={`flex items-center justify-between p-3 rounded-xl border text-left transition-all ${
                   activePalette.id === p.id
                     ? 'bg-cyan-500/10 border-cyan-500 shadow'
-                    : 'bg-neutral-900/40 border-neutral-800 hover:bg-neutral-850 hover:border-neutral-700'
+                    : 'bg-neutral-900/40 border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700'
                 }`}
               >
                 <span className="text-[11px] font-bold text-neutral-100">

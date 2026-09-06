@@ -190,7 +190,7 @@ export default function Dashboard() {
             </h1>
             
             {/* Subtitle */}
-            <p className="text-sm md:text-md text-indigo-250/90 font-semibold tracking-tight mt-2 pb-1">
+            <p className="text-sm md:text-base text-indigo-200/90 font-semibold tracking-tight mt-2 pb-1">
               Interactive tools for IB students who need a mental reset.
             </p>
 
@@ -201,7 +201,7 @@ export default function Dashboard() {
 
             <button
               onClick={startCalmingBreak}
-              className="mt-6 flex items-center gap-2 px-6 py-3.5 bg-indigo-600 hover:bg-indigo-550 text-white rounded-full text-xs font-bold font-sans shadow-lg shadow-indigo-950/50 cursor-pointer hover:scale-102 transition-all active:scale-98"
+              className="mt-6 flex items-center gap-2 px-6 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full text-xs font-bold font-sans shadow-lg shadow-indigo-950/50 cursor-pointer hover:scale-105 transition-all active:scale-95"
             >
               <Clock className="w-4 h-4" /> Start a calming break
             </button>
@@ -216,11 +216,11 @@ export default function Dashboard() {
             <div className="flex flex-col gap-3 font-sans text-xs">
               <div className="flex justify-between items-center">
                 <span className="text-slate-400 font-medium">Total Visits</span>
-                <span className="font-bold text-slate-205 font-mono">{visitsCount}</span>
+                <span className="font-bold text-slate-200 font-mono">{visitsCount}</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-slate-400 font-medium">Relaxation Log</span>
-                <span className="font-bold text-slate-205 font-mono">{minutesSpent} mins</span>
+                <span className="font-bold text-slate-200 font-mono">{minutesSpent} mins</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-slate-400 font-medium">Favorite Toy</span>
@@ -261,7 +261,7 @@ export default function Dashboard() {
             ) : (
               <button
                 onClick={() => setShowResetConfirm(true)}
-                className="mt-5 text-[9px] uppercase tracking-wider text-rose-450 hover:text-rose-400 flex items-center gap-1 hover:underline cursor-pointer font-bold select-none"
+                className="mt-5 text-[9px] uppercase tracking-wider text-rose-500 hover:text-rose-400 flex items-center gap-1 hover:underline cursor-pointer font-bold select-none"
               >
                 <RotateCcw className="w-3 h-3" /> Reset all statistics
               </button>
@@ -290,9 +290,9 @@ export default function Dashboard() {
             <button
               key={moodOption.id}
               onClick={() => handleMoodSelect(moodOption.id)}
-              className={`p-3.5 border rounded-xl flex items-center justify-center gap-2 hover:scale-102 transition-all cursor-pointer ${
+              className={`p-3.5 border rounded-xl flex items-center justify-center gap-2 hover:scale-105 transition-all cursor-pointer ${
                 selectedMood === moodOption.id 
-                  ? 'border-indigo-550 ring-2 ring-indigo-950/80 font-bold shadow bg-indigo-600 text-white' 
+                  ? 'border-indigo-500 ring-2 ring-indigo-950/80 font-bold shadow bg-indigo-600 text-white' 
                   : `${moodOption.color}`
               }`}
             >
@@ -325,7 +325,7 @@ export default function Dashboard() {
 
               <button
                 onClick={() => setActiveTab(moodRecommendation.id)}
-                className="flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-550 text-white text-xs font-bold rounded-full cursor-pointer shrink-0 shadow-md self-start sm:self-center transition-all hover:scale-102"
+                className="flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-full cursor-pointer shrink-0 shadow-md self-start sm:self-center transition-all hover:scale-105"
               >
                 Launch Widget <ChevronRight className="w-4 h-4" />
               </button>
@@ -336,7 +336,7 @@ export default function Dashboard() {
 
       {/* 3. Five sensory widgets grid */}
       <div className="flex flex-col gap-4">
-        <h3 className="text-md font-extrabold text-[#94a3b8] uppercase tracking-wider font-sans">
+        <h3 className="text-base font-extrabold text-[#94a3b8] uppercase tracking-wider font-sans">
           Calming sensory playgrounds
         </h3>
 
@@ -344,7 +344,7 @@ export default function Dashboard() {
           {/* Card Slime */}
           <div 
             onClick={() => setActiveTab('slime')}
-            className="group bg-pink-950/15 hover:bg-pink-950/30 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-pink-900/20 hover:border-pink-500/30 shadow-md hover:scale-101 transition-all cursor-pointer relative overflow-hidden min-h-[225px]"
+            className="group bg-pink-950/15 hover:bg-pink-950/30 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-pink-900/20 hover:border-pink-500/30 shadow-md hover:scale-105 transition-all cursor-pointer relative overflow-hidden min-h-[225px]"
           >
             <div className="absolute bottom-[-20px] right-[-20px] w-32 h-32 bg-pink-400/10 rounded-full blur-2xl group-hover:scale-110 transition-transform" />
             <div className="z-10 flex flex-col gap-2">
@@ -369,7 +369,7 @@ export default function Dashboard() {
           {/* Card Sand */}
           <div 
             onClick={() => setActiveTab('sand')}
-            className="group bg-amber-955/15 hover:bg-amber-950/20 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-amber-900/20 hover:border-amber-500/30 shadow-md hover:scale-101 transition-all cursor-pointer relative overflow-hidden min-h-[225px]"
+            className="group bg-amber-950/15 hover:bg-amber-950/20 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-amber-900/20 hover:border-amber-500/30 shadow-md hover:scale-105 transition-all cursor-pointer relative overflow-hidden min-h-[225px]"
           >
             <div className="absolute bottom-[-10px] right-[-10px] w-28 h-28 bg-amber-400/10 rounded-full blur-xl group-hover:scale-110 transition-transform" />
             <div className="z-10 flex flex-col gap-2">
@@ -386,7 +386,7 @@ export default function Dashboard() {
                 Rake custom parallel sand pathways slowly to restore internal cosmic clarity around physical pebbles.
               </p>
             </div>
-            <div className="z-10 bg-amber-600 text-white w-fit px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-md hover:bg-amber-550 transition-colors mt-4">
+            <div className="z-10 bg-amber-600 text-white w-fit px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-md hover:bg-amber-500 transition-colors mt-4">
               Enter Garden
             </div>
           </div>
@@ -394,23 +394,23 @@ export default function Dashboard() {
           {/* Card Bubble Wrap */}
           <div 
             onClick={() => setActiveTab('bubble')}
-            className="group bg-sky-950/15 hover:bg-sky-950/30 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-sky-900/20 hover:border-sky-500/30 shadow-md hover:scale-101 transition-all cursor-pointer relative overflow-hidden min-h-[225px]"
+            className="group bg-sky-950/15 hover:bg-sky-950/30 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-sky-900/20 hover:border-sky-500/30 shadow-md hover:scale-105 transition-all cursor-pointer relative overflow-hidden min-h-[225px]"
           >
             <div className="z-10 flex flex-col gap-2">
               <div className="flex justify-between items-center">
                 <span className="text-[10px] font-black text-sky-400 tracking-wider">POP THE STRESS</span>
-                <div className="p-2 bg-sky-950/40 rounded-xl text-sky-450">
+                <div className="p-2 bg-sky-950/40 rounded-xl text-sky-400">
                   <Grid className="w-4 h-4" />
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-sky-305 uppercase tracking-tight mt-1">
+              <h4 className="text-xl font-bold text-sky-300 uppercase tracking-tight mt-1">
                 Bubble Wrap
               </h4>
               <p className="text-xs text-sky-200/80 leading-relaxed font-sans mt-1">
                 Demolish virtual grids of bubble sheets for instant pressure discharge. Track active bubble pops and climb student rankings.
               </p>
             </div>
-            <div className="z-10 bg-slate-900 w-full py-2 rounded-2xl text-center text-[10px] font-bold text-sky-405 border border-sky-900/50 uppercase mt-4">
+            <div className="z-10 bg-slate-900 w-full py-2 rounded-2xl text-center text-[10px] font-bold text-sky-400 border border-sky-900/50 uppercase mt-4">
               Get Popping
             </div>
           </div>
@@ -418,7 +418,7 @@ export default function Dashboard() {
           {/* Card Fluid */}
           <div 
             onClick={() => setActiveTab('fluid')}
-            className="group bg-indigo-950/30 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-indigo-900/20 hover:border-indigo-500/30 shadow-md hover:scale-101 transition-all cursor-pointer relative overflow-hidden min-h-[225px] text-white"
+            className="group bg-indigo-950/30 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-indigo-900/20 hover:border-indigo-500/30 shadow-md hover:scale-105 transition-all cursor-pointer relative overflow-hidden min-h-[225px] text-white"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 opacity-25 group-hover:opacity-40 transition-opacity" />
             <div className="z-10 flex flex-col gap-2">
@@ -435,7 +435,7 @@ export default function Dashboard() {
                 Swirl waves of gorgeous fluid canvas paintings with custom viscosity, speeds, and auroral models.
               </p>
             </div>
-            <div className="z-10 bg-indigo-600 hover:bg-indigo-550 w-fit px-4 py-1.5 rounded-full text-[10px] font-bold text-white uppercase mt-4">
+            <div className="z-10 bg-indigo-600 hover:bg-indigo-500 w-fit px-4 py-1.5 rounded-full text-[10px] font-bold text-white uppercase mt-4">
               Paint Vortex
             </div>
           </div>
@@ -443,7 +443,7 @@ export default function Dashboard() {
           {/* Card Pebble Stacker */}
           <div 
             onClick={() => setActiveTab('pebble')}
-            className="group bg-stone-900/30 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-stone-800 hover:border-stone-500/30 shadow-md hover:scale-101 transition-all cursor-pointer relative overflow-hidden min-h-[225px]"
+            className="group bg-stone-900/30 rounded-[2.2rem] p-6 flex flex-col justify-between border-2 border-stone-800 hover:border-stone-500/30 shadow-md hover:scale-105 transition-all cursor-pointer relative overflow-hidden min-h-[225px]"
           >
             <div className="absolute bottom-[-10px] right-[-10px] w-24 h-24 bg-stone-400/5 rounded-full blur-xl group-hover:scale-110 transition-transform" />
             <div className="z-10 flex flex-col gap-2">
@@ -586,7 +586,7 @@ export default function Dashboard() {
                     href={member.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3.5 inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-950/50 hover:bg-indigo-600/20 border border-indigo-500/20 text-indigo-300 hover:text-indigo-200 text-[10px] font-bold rounded-lg transition-all shadow-md group-hover:scale-102 cursor-pointer"
+                    className="mt-3.5 inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-950/50 hover:bg-indigo-600/20 border border-indigo-500/20 text-indigo-300 hover:text-indigo-200 text-[10px] font-bold rounded-lg transition-all shadow-md group-hover:scale-105 cursor-pointer"
                   >
                     Visit website <ExternalLink className="w-3 h-3 text-indigo-400" />
                   </a>
@@ -608,12 +608,12 @@ export default function Dashboard() {
           >
             <div className="max-w-md w-full bg-slate-900 border border-slate-800 p-8 rounded-[2.5rem] flex flex-col items-center gap-6 text-center shadow-2xl">
               <div className="flex justify-between items-center w-full">
-                <span className="text-[10px] text-indigo-405 font-black tracking-widest uppercase">
+                <span className="text-[10px] text-indigo-400 font-black tracking-widest uppercase">
                   ACTIVE CAS WELLNESS BREATHING
                 </span>
                 <button
                   onClick={() => setBreakActive(false)}
-                  className="p-1 rounded-lg bg-slate-800 hover:bg-slate-705 text-slate-400 hover:text-white cursor-pointer transition-colors"
+                  className="p-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white cursor-pointer transition-colors"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -625,12 +625,12 @@ export default function Dashboard() {
                 <motion.div
                   animate={{ scale: [1, 1.45, 1], opacity: [0.3, 0.05, 0.3] }}
                   transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-                  className="absolute inset-0 rounded-full bg-indigo-550/10 border-2 border-indigo-500/20"
+                  className="absolute inset-0 rounded-full bg-indigo-500/10 border-2 border-indigo-500/20"
                 />
                 
                 {/* Core ring */}
-                <div className="absolute w-28 h-28 rounded-full bg-linear-to-tr from-indigo-500 to-indigo-650 shadow-xl shadow-indigo-950 flex flex-col items-center justify-center">
-                  <span className="text-3.5xl font-black text-white font-mono leading-none">
+                <div className="absolute w-28 h-28 rounded-full bg-linear-to-tr from-indigo-500 to-indigo-600 shadow-xl shadow-indigo-950 flex flex-col items-center justify-center">
+                  <span className="text-4xl font-black text-white font-mono leading-none">
                     {breakTimer}
                   </span>
                   <span className="text-[9px] text-indigo-100 uppercase tracking-widest mt-1">
@@ -650,7 +650,7 @@ export default function Dashboard() {
               </div>
 
               {/* Direct exit hint */}
-              <span className="text-[10px] text-indigo-405 font-bold tracking-widest uppercase font-mono">
+              <span className="text-[10px] text-indigo-400 font-bold tracking-widest uppercase font-mono">
                 RELAXATION CREDITS INTEGRATE SECURELY
               </span>
             </div>
@@ -689,7 +689,7 @@ export default function Dashboard() {
               <button
                 id="dismiss-success-modal"
                 onClick={() => setShowBreakSuccess(false)}
-                className="w-full py-3 bg-indigo-600 hover:bg-indigo-550 text-white rounded-full text-xs font-bold shadow-lg cursor-pointer hover:scale-102 transition-transform uppercase tracking-wider"
+                className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full text-xs font-bold shadow-lg cursor-pointer hover:scale-105 transition-transform uppercase tracking-wider"
               >
                 Heck Yeah, Proceed!
               </button>
