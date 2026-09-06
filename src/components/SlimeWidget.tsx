@@ -462,7 +462,7 @@ export default function SlimeWidget() {
       {/* Tab Header Panel */}
       <div className="flex flex-wrap items-center justify-between gap-4 p-5 bg-slate-900/40 border-b border-slate-900 rounded-t-3xl">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-violet-550/10 rounded-xl">
+          <div className="p-2.5 bg-violet-500/10 rounded-xl">
             <Sparkles className="w-5 h-5 text-violet-400" />
           </div>
           <div>
@@ -474,14 +474,14 @@ export default function SlimeWidget() {
         <div className="flex gap-2">
           <button
             onClick={() => squish('horizontal')}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-xs text-slate-205 font-bold rounded-lg transition-colors border border-slate-900 cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-xs text-slate-200 font-bold rounded-lg transition-colors border border-slate-900 cursor-pointer"
             title="Stretch horizontally"
           >
             ↔ Squish X
           </button>
           <button
             onClick={() => squish('vertical')}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-xs text-slate-205 font-bold rounded-lg transition-colors border border-slate-900 cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-xs text-slate-200 font-bold rounded-lg transition-colors border border-slate-900 cursor-pointer"
             title="Stretch vertically"
           >
             ↕ Squish Y
@@ -497,7 +497,7 @@ export default function SlimeWidget() {
           </button>
           <button
             onClick={() => setIsFullscreen(!isFullscreen)}
-            className="p-1.5 bg-violet-600 hover:bg-violet-555 text-white rounded-lg transition-all cursor-pointer"
+            className="p-1.5 bg-violet-600 hover:bg-violet-500 text-white rounded-lg transition-all cursor-pointer"
             title={isFullscreen ? "Exit Fullscreen" : "Fullscreen Playground"}
           >
             {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
@@ -553,8 +553,8 @@ export default function SlimeWidget() {
                 onClick={() => setSelectedColor(color)}
                 className={`group flex items-center gap-2 p-2 rounded-xl text-left border transition-all cursor-pointer ${
                   selectedColor.id === color.id
-                    ? 'bg-violet-950/40 border-violet-550 shadow-inner text-white'
-                    : 'bg-slate-900/40 border-slate-800 hover:border-slate-705 text-slate-300'
+                    ? 'bg-violet-950/40 border-violet-500 shadow-inner text-white'
+                    : 'bg-slate-900/40 border-slate-800 hover:border-slate-700 text-slate-300'
                 }`}
               >
                 <span
@@ -581,8 +581,8 @@ export default function SlimeWidget() {
                 onClick={() => setSelectedTexture(tex.id)}
                 className={`p-2.5 rounded-xl border text-center transition-all cursor-pointer ${
                   selectedTexture === tex.id
-                    ? 'bg-violet-955 border-violet-500 shadow-inner'
-                    : 'bg-slate-900/40 border-slate-800 hover:border-slate-705'
+                    ? 'bg-violet-950 border-violet-500 shadow-inner'
+                    : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
                 }`}
               >
                 <span className="block text-[11px] font-bold text-slate-100 capitalize">

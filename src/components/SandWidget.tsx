@@ -391,7 +391,7 @@ export default function SandWidget() {
       {/* Header Info Banner */}
       <div className="flex flex-wrap items-center justify-between gap-4 p-5 bg-slate-900/40 border-b border-slate-900 rounded-t-3xl">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-amber-550/10 rounded-xl">
+          <div className="p-2.5 bg-amber-500/10 rounded-xl">
             <Compass className="w-5 h-5 text-amber-500" />
           </div>
           <div>
@@ -419,7 +419,7 @@ export default function SandWidget() {
             onClick={handleReset}
             className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-slate-200 text-xs font-semibold rounded-lg border border-slate-900 transition-all cursor-pointer"
           >
-            <RefreshCw className="w-3.5 h-3.5 text-amber-550" /> Reset Bed
+            <RefreshCw className="w-3.5 h-3.5 text-amber-500" /> Reset Bed
           </button>
         </div>
       </div>
@@ -440,7 +440,7 @@ export default function SandWidget() {
 
         {/* Sand Garden instructions Overlay */}
         <div className="absolute bottom-4 left-4 flex gap-1 items-center px-2 py-0.5 pointer-events-none bg-slate-950/75 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-slate-900">
-          <Info className="w-3.5 h-3.5 text-amber-550" />
+          <Info className="w-3.5 h-3.5 text-amber-500" />
           Click Stone to drag | Drag sand to rake grooves | Waves play synthesized sea wind &amp; water sounds
         </div>
       </div>
@@ -457,7 +457,7 @@ export default function SandWidget() {
               onClick={() => setActiveRake(rake)}
               className={`p-3 text-left rounded-xl border transition-all cursor-pointer ${
                 activeRake.id === rake.id
-                  ? 'bg-amber-600/10 border-amber-550'
+                  ? 'bg-amber-600/10 border-amber-500'
                   : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
               }`}
             >
