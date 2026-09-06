@@ -517,11 +517,11 @@ export default function Dashboard() {
               border: 'border-purple-500/20',
             },
             {
-              id: 'ken_zhong',
-              name: 'Ken Zhong',
+              id: 'lucas',
+              name: 'Lucas',
               role: 'Playground Thinker (came up with slime, zen sand, e.t.c)',
-              img: publicAsset('/portrait_images/ken_zhong.jpg'),
-              initials: 'KZ',
+              img: publicAsset('/portrait_images/lucas.jpg'),
+              initials: 'L',
               gradient: 'from-amber-900/40 to-amber-950/90',
               text: 'text-amber-400',
               border: 'border-amber-500/20',
@@ -535,16 +535,6 @@ export default function Dashboard() {
               gradient: 'from-emerald-900/40 to-emerald-950/90',
               text: 'text-emerald-400',
               border: 'border-emerald-500/20',
-            },
-            {
-              id: 'bryan_he',
-              name: 'Bryan He',
-              role: 'Playground Thinker (came up with slime, zen sand, e.t.c)',
-              img: publicAsset('/portrait_images/bryan_he.jpg'),
-              initials: 'BH',
-              gradient: 'from-pink-900/40 to-pink-950/90',
-              text: 'text-pink-400',
-              border: 'border-pink-500/20',
             },
           ].map(member => (
             <div 

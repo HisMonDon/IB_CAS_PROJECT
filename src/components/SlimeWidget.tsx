@@ -9,7 +9,6 @@ import { Maximize2, Minimize2, RotateCcw, Volume2, Info, Sparkles, Sliders } fro
 import { useStore } from '../store';
 import { audio } from '../utils/audio';
 
-// Slime colors dictionary
 const SLIME_COLORS = [
   { id: 'lavender', name: 'Lavender Gel', primary: '#a78bfa', secondary: '#7c3aed', specular: '#e0e7ff', glitter: ['#f472b6', '#60a5fa', '#ffffff'] },
   { id: 'cosmic', name: 'Cosmic Pearl', primary: '#f472b6', secondary: '#db2777', specular: '#ffe4e6', glitter: ['#fef08a', '#38bdf8', '#ffffff'] },
@@ -45,15 +44,15 @@ export default function SlimeWidget() {
   const [selectedTexture, setSelectedTexture] = useState('glossy');
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [squishFactor, setSquishFactor] = useState({ x: 1, y: 1 });
-  const [pokeForce, setPokeForce] = useState(0.5); // Slime responsiveness
+  const [pokeForce, setPokeForce] = useState(0.5); 
 
-  // Spring physics constants
+  // 
   const stiffness = 0.08;
   const damping = 0.82;
   const slimeRadius = 130;
   const numPoints = 26;
 
-  // Track pointers
+  // 
   const pointsRef = useRef<Point[]>([]);
   const slimeCenter = useRef({ x: 0, y: 0 });
   const mouseRef = useRef({ x: 0, y: 0, isDown: false, grabIndex: -1, lastX: 0, lastY: 0 });
