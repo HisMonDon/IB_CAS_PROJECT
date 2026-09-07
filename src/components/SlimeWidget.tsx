@@ -460,7 +460,7 @@ export default function SlimeWidget() {
   return (
     <div className="flex flex-col h-full font-sans" id="slime-simulator">
       {/* Tab Header Panel */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-5 bg-slate-900/40 border-b border-slate-900 rounded-t-3xl">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-5 glass-strong border-b border-white/10 rounded-t-[1.75rem]">
         <div className="flex items-center gap-3">
           <div className="p-2.5 bg-violet-500/10 rounded-xl">
             <Sparkles className="w-5 h-5 text-violet-400" />
@@ -474,14 +474,14 @@ export default function SlimeWidget() {
         <div className="flex gap-2">
           <button
             onClick={() => squish('horizontal')}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-xs text-slate-200 font-bold rounded-lg transition-colors border border-slate-900 cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/8 hover:bg-white/14 text-xs text-slate-200 font-bold rounded-lg transition-colors border border-white/10 cursor-pointer"
             title="Stretch horizontally"
           >
             ↔ Squish X
           </button>
           <button
             onClick={() => squish('vertical')}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-xs text-slate-200 font-bold rounded-lg transition-colors border border-slate-900 cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/8 hover:bg-white/14 text-xs text-slate-200 font-bold rounded-lg transition-colors border border-white/10 cursor-pointer"
             title="Stretch vertically"
           >
             ↕ Squish Y
@@ -490,7 +490,7 @@ export default function SlimeWidget() {
             onClick={() => {
               if (canvasRef.current) initSlime(canvasRef.current.width, canvasRef.current.height);
             }}
-            className="p-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-slate-300 rounded-lg transition-all border border-slate-900 cursor-pointer"
+            className="p-1.5 bg-white/8 hover:bg-white/14 text-slate-300 rounded-lg transition-all border border-white/10 cursor-pointer"
             title="Reset position"
           >
             <RotateCcw className="w-4 h-4" />
@@ -511,7 +511,7 @@ export default function SlimeWidget() {
         className={`relative bg-radial from-slate-950 to-slate-900 overflow-hidden select-none transition-all flex items-center justify-center ${
           isFullscreen 
             ? 'fixed inset-4 z-50 rounded-2xl border border-slate-800 shadow-2xl backdrop-blur-md'
-            : 'rounded-b-2xl border-x border-b border-slate-900 min-h-[350px] lg:min-h-[440px]'
+            : 'rounded-b-2xl border-x border-b border-white/10 min-h-[350px] lg:min-h-[440px]'
         }`}
       >
         <canvas
@@ -524,7 +524,7 @@ export default function SlimeWidget() {
         />
 
         {/* Small interaction guidelines Overlay */}
-        <div className="absolute top-4 left-4 flex gap-1 items-center px-1.5 py-0.5 pointer-events-none bg-slate-950/75 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-slate-900">
+        <div className="absolute top-4 left-4 flex gap-1 items-center px-1.5 py-0.5 pointer-events-none bg-slate-950/75 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-white/10">
           <Info className="w-3 h-3 text-violet-400" />
           Drag border to stretch | Poke boundary to dent | Drag center to move
         </div>
@@ -540,10 +540,10 @@ export default function SlimeWidget() {
       </div>
 
       {/* Customization controls bottom panel */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-4 p-5 bg-slate-950/50 border border-slate-900/60 rounded-2xl animate-fade-in">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-4 p-5 glass rounded-2xl animate-fade-in">
         {/* Slime Types Select */}
         <div>
-          <span className="block text-xs font-semibold text-slate-300 mb-3 tracking-wide uppercase font-sans border-b border-slate-900 pb-1.5">
+          <span className="block text-xs font-semibold text-slate-300 mb-3 tracking-wide uppercase font-sans border-b border-white/10 pb-1.5">
             1. Choose Slime Formula
           </span>
           <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-2">
@@ -554,7 +554,7 @@ export default function SlimeWidget() {
                 className={`group flex items-center gap-2 p-2 rounded-xl text-left border transition-all cursor-pointer ${
                   selectedColor.id === color.id
                     ? 'bg-violet-950/40 border-violet-500 shadow-inner text-white'
-                    : 'bg-slate-900/40 border-slate-800 hover:border-slate-700 text-slate-300'
+                    : 'bg-white/6 border-white/10 hover:border-white/20 text-slate-300'
                 }`}
               >
                 <span
@@ -571,7 +571,7 @@ export default function SlimeWidget() {
 
         {/* Texture Select & Settings */}
         <div>
-          <span className="block text-xs font-semibold text-slate-300 mb-3 tracking-wide uppercase font-sans border-b border-slate-900 pb-1.5">
+          <span className="block text-xs font-semibold text-slate-300 mb-3 tracking-wide uppercase font-sans border-b border-white/10 pb-1.5">
             2. Material Viscosity Texture
           </span>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -582,7 +582,7 @@ export default function SlimeWidget() {
                 className={`p-2.5 rounded-xl border text-center transition-all cursor-pointer ${
                   selectedTexture === tex.id
                     ? 'bg-violet-950 border-violet-500 shadow-inner'
-                    : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
+                    : 'bg-white/6 border-white/10 hover:border-white/20'
                 }`}
               >
                 <span className="block text-[11px] font-bold text-slate-100 capitalize">

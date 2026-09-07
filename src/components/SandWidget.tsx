@@ -389,7 +389,7 @@ export default function SandWidget() {
   return (
     <div className="flex flex-col h-full font-sans" id="zen-sand-garden">
       {/* Header Info Banner */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-5 bg-slate-900/40 border-b border-slate-900 rounded-t-3xl">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-5 glass-strong border-b border-white/10 rounded-t-[1.75rem]">
         <div className="flex items-center gap-3">
           <div className="p-2.5 bg-amber-500/10 rounded-xl">
             <Compass className="w-5 h-5 text-amber-500" />
@@ -408,7 +408,7 @@ export default function SandWidget() {
             className={`flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-lg border transition-all cursor-pointer ${
               ambientEnabled
                 ? 'bg-amber-600/20 text-amber-400 border-amber-500/40 shadow-inner'
-                : 'bg-slate-950/60 text-slate-300 border-slate-900 hover:bg-slate-900/80'
+                : 'bg-white/8 text-slate-300 border-white/10 hover:bg-white/14'
             }`}
           >
             {ambientEnabled ? <Volume2 className="w-4 h-4 text-amber-400" /> : <VolumeX className="w-4 h-4 text-slate-500" />}
@@ -417,7 +417,7 @@ export default function SandWidget() {
 
           <button
             onClick={handleReset}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-slate-200 text-xs font-semibold rounded-lg border border-slate-900 transition-all cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/8 hover:bg-white/14 text-slate-200 text-xs font-semibold rounded-lg border border-white/10 transition-all cursor-pointer"
           >
             <RefreshCw className="w-3.5 h-3.5 text-amber-500" /> Reset Bed
           </button>
@@ -427,7 +427,7 @@ export default function SandWidget() {
       {/* Rake interactive Sand Stage */}
       <div 
         ref={containerRef}
-        className="relative bg-slate-950 rounded-b-2xl overflow-hidden select-none border-x border-b border-slate-900 h-[410px] flex items-center justify-center cursor-crosshair touch-none"
+        className="relative bg-slate-950 rounded-b-2xl overflow-hidden select-none border-x border-b border-white/10 h-[410px] flex items-center justify-center cursor-crosshair touch-none"
       >
         <canvas
           ref={canvasRef}
@@ -439,14 +439,14 @@ export default function SandWidget() {
         />
 
         {/* Sand Garden instructions Overlay */}
-        <div className="absolute bottom-4 left-4 flex gap-1 items-center px-2 py-0.5 pointer-events-none bg-slate-950/75 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-slate-900">
+        <div className="absolute bottom-4 left-4 flex gap-1 items-center px-2 py-0.5 pointer-events-none bg-black/40 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-white/10">
           <Info className="w-3.5 h-3.5 text-amber-500" />
           Click Stone to drag | Drag sand to rake grooves | Waves play synthesized sea wind &amp; water sounds
         </div>
       </div>
 
       {/* Rake Selection Bottom Drawer */}
-      <div className="mt-4 p-5 bg-slate-950/50 border border-slate-900/60 rounded-2xl">
+      <div className="mt-4 p-5 glass rounded-2xl">
         <span className="block text-xs font-semibold text-slate-300 mb-3 tracking-wide uppercase font-sans">
           Select Meditative Combing Tool
         </span>
@@ -458,7 +458,7 @@ export default function SandWidget() {
               className={`p-3 text-left rounded-xl border transition-all cursor-pointer ${
                 activeRake.id === rake.id
                   ? 'bg-amber-600/10 border-amber-500'
-                  : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
+                  : 'bg-white/6 border-white/10 hover:border-white/20'
               }`}
             >
               <span className="block text-[11px] font-bold text-slate-100 mb-0.5">

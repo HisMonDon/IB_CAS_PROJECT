@@ -151,9 +151,9 @@ export default function BubbleWidget() {
   return (
     <div className="flex flex-col h-full" id="bubble-wrap-popper">
       {/* Header Panel */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-5 bg-slate-900/40 border-b border-slate-900 rounded-t-3xl">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-5 glass-strong border-b border-white/10 rounded-t-[1.75rem]">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-slate-950/60 rounded-xl border border-slate-900">
+          <div className="p-2.5 bg-white/8 rounded-xl border border-white/10">
             <Grid className={`w-5 h-5 ${selectedColor.textClass}`} />
           </div>
           <div>
@@ -163,7 +163,7 @@ export default function BubbleWidget() {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="px-3 py-1.5 bg-slate-950/60 rounded-lg text-xs border border-slate-900">
+          <div className="px-3 py-1.5 bg-white/8 rounded-lg text-xs border border-white/10">
             <span className="text-slate-400 mr-1.5 font-sans">Session:</span>
             <span className={`font-bold ${selectedColor.textClass} font-mono`}>{sessionCount}</span>
             <span className="text-slate-700 mx-2">|</span>
@@ -182,7 +182,7 @@ export default function BubbleWidget() {
       </div>
 
       {/* Bubble Wrap sheet workspace */}
-      <div className="relative p-6 bg-slate-950 border-x border-b border-slate-900 rounded-b-2xl overflow-y-auto max-h-[380px] lg:max-h-[440px] flex items-center justify-center">
+      <div className="relative p-6 bg-slate-950 border-x border-b border-white/10 rounded-b-2xl overflow-y-auto max-h-[380px] lg:max-h-[440px] flex items-center justify-center">
         <div 
           className="grid gap-2 border border-slate-900/60 p-4 rounded-2xl bg-slate-900 select-none touch-none"
           style={{ gridTemplateColumns: `repeat(${gridSize.cols}, minmax(0, 1fr))` }}
@@ -228,15 +228,15 @@ export default function BubbleWidget() {
         </div>
 
         {/* Swipe instructions helper overlay */}
-        <div className="absolute bottom-4 left-4 flex gap-1 items-center px-1.5 py-0.5 pointer-events-none bg-slate-950/75 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-slate-900">
+        <div className="absolute bottom-4 left-4 flex gap-1 items-center px-1.5 py-0.5 pointer-events-none bg-black/40 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-white/10">
           <Info className={`w-3 h-3 ${selectedColor.textClass}`} />
           Click to pop individual bubbles | Click and hold click to drag-swipe across sheets!
         </div>
       </div>
 
       {/* Bubble Pop Color Customizer shelf */}
-      <div className="mt-4 p-5 bg-slate-950/50 border border-slate-900/60 rounded-2xl">
-        <span className="block text-xs font-semibold text-slate-300 mb-3 tracking-wide uppercase font-sans border-b border-slate-900 pb-1.5 flex items-center gap-2">
+      <div className="mt-4 p-5 glass rounded-2xl">
+        <span className="block text-xs font-semibold text-slate-300 mb-3 tracking-wide uppercase font-sans border-b border-white/10 pb-1.5 flex items-center gap-2">
           <Sparkles className={`w-4 h-4 ${selectedColor.textClass}`} /> Select Bubble Color Theme
         </span>
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
@@ -246,8 +246,8 @@ export default function BubbleWidget() {
               onClick={() => setSelectedColor(color)}
               className={`group flex items-center gap-2 p-2.5 rounded-xl text-left border transition-all cursor-pointer ${
                 selectedColor.id === color.id
-                  ? 'bg-slate-900/80 border-slate-700 shadow-inner text-white font-bold'
-                  : 'bg-slate-900/20 border-slate-900/60 hover:border-slate-800 text-slate-400 hover:text-slate-200'
+                  ? 'bg-white/14 border-white/20 shadow-inner text-white font-bold'
+                  : 'bg-white/4 border-white/8 hover:border-white/16 text-slate-400 hover:text-slate-200'
               }`}
             >
               <span
@@ -263,16 +263,16 @@ export default function BubbleWidget() {
       </div>
 
       {/* Badges / Achievements Panel */}
-      <div className="mt-4 p-5 bg-slate-950/50 border border-slate-900/60 rounded-2xl flex flex-col gap-3">
+      <div className="mt-4 p-5 glass rounded-2xl flex flex-col gap-3">
         <span className="block text-xs font-semibold text-slate-300 tracking-wide uppercase font-sans">
           CAS Wellness Achievements
         </span>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {/* Badge 1 */}
           <div className={`p-3.5 rounded-xl border flex items-center gap-3 transition-colors ${
-            unlockedFivePop ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-slate-950/40 border-slate-900 opacity-45'
+            unlockedFivePop ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-white/4 border-white/8 opacity-45'
           }`}>
-            <div className={`p-2 rounded-lg ${unlockedFivePop ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-900 text-slate-500'}`}>
+            <div className={`p-2 rounded-lg ${unlockedFivePop ? 'bg-emerald-500/20 text-emerald-400' : 'bg-white/8 text-slate-500'}`}>
               <Award className="w-5 h-5" />
             </div>
             <div>
@@ -287,9 +287,9 @@ export default function BubbleWidget() {
 
           {/* Badge 2 */}
           <div className={`p-3.5 rounded-xl border flex items-center gap-3 transition-colors ${
-            unlockedHundredPop ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-slate-950/40 border-slate-900 opacity-45'
+            unlockedHundredPop ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-white/4 border-white/8 opacity-45'
           }`}>
-            <div className={`p-2 rounded-lg ${unlockedHundredPop ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-900 text-slate-500'}`}>
+            <div className={`p-2 rounded-lg ${unlockedHundredPop ? 'bg-emerald-500/20 text-emerald-400' : 'bg-white/8 text-slate-500'}`}>
               <Award className="w-5 h-5" />
             </div>
             <div>
@@ -304,9 +304,9 @@ export default function BubbleWidget() {
 
           {/* Badge 3 */}
           <div className={`p-3.5 rounded-xl border flex items-center gap-3 transition-colors ${
-            unlockedFiveHundredPop ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-slate-950/40 border-slate-900 opacity-45'
+            unlockedFiveHundredPop ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-white/4 border-white/8 opacity-45'
           }`}>
-            <div className={`p-2 rounded-lg ${unlockedFiveHundredPop ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-900 text-slate-500'}`}>
+            <div className={`p-2 rounded-lg ${unlockedFiveHundredPop ? 'bg-emerald-500/20 text-emerald-400' : 'bg-white/8 text-slate-500'}`}>
               <Award className="w-5 h-5" />
             </div>
             <div>

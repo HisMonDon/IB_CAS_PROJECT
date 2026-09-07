@@ -248,7 +248,7 @@ export default function FluidWidget() {
   return (
     <div className="flex flex-col h-full" id="fluid-color-playground">
       {/* Header Controls */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-5 bg-neutral-900/45 border-b border-neutral-200/5 rounded-t-2xl">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-5 glass-strong border-b border-white/10 rounded-t-[1.75rem]">
         <div className="flex items-center gap-3">
           <div className="p-2.5 bg-cyan-500/10 rounded-xl">
             <Waves className="w-5 h-5 text-cyan-400" />
@@ -270,7 +270,7 @@ export default function FluidWidget() {
       {/* Main Canvas Area */}
       <div 
         ref={containerRef}
-        className="relative bg-[#0a0a0c] rounded-b-2xl overflow-hidden select-none border-x border-b border-neutral-200/5 h-[410px] flex items-center justify-center cursor-crosshair touch-none"
+        className="relative bg-[#0a0a0c] rounded-b-2xl overflow-hidden select-none border-x border-b border-white/10 h-[410px] flex items-center justify-center cursor-crosshair touch-none"
       >
         <canvas
           ref={canvasRef}
@@ -282,14 +282,14 @@ export default function FluidWidget() {
         />
 
         {/* Dynamic Canvas statistics overlay */}
-        <div className="absolute top-4 left-4 flex gap-1 items-center px-1.5 py-0.5 pointer-events-none bg-neutral-900/60 rounded text-[9px] text-neutral-400 tracking-wide select-none uppercase font-mono">
+        <div className="absolute top-4 left-4 flex gap-1 items-center px-1.5 py-0.5 pointer-events-none bg-black/40 rounded text-[9px] text-neutral-400 tracking-wide select-none uppercase font-mono border border-white/10">
           <Info className="w-3 h-3 text-cyan-400" />
           Swirl circles to activate turbulence | Change viscosity via slider below
         </div>
       </div>
 
       {/* Viscosity Controls and Palette Select Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-4 p-5 bg-neutral-900/30 border border-neutral-200/5 rounded-2xl">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-4 p-5 glass rounded-2xl">
         {/* Palette choosing */}
         <div>
           <span className="block text-xs font-semibold text-neutral-300 mb-3 tracking-wide uppercase font-sans">
@@ -307,7 +307,7 @@ export default function FluidWidget() {
                 className={`flex items-center justify-between p-3 rounded-xl border text-left transition-all ${
                   activePalette.id === p.id
                     ? 'bg-cyan-500/10 border-cyan-500 shadow'
-                    : 'bg-neutral-900/40 border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700'
+                    : 'bg-white/6 border-white/10 hover:bg-white/10 hover:border-white/20'
                 }`}
               >
                 <span className="text-[11px] font-bold text-neutral-100">
@@ -338,7 +338,7 @@ export default function FluidWidget() {
             </span>
           </div>
 
-          <div className="flex flex-col gap-2 p-3 bg-neutral-950/40 rounded-xl border border-neutral-800">
+          <div className="flex flex-col gap-2 p-3 bg-white/4 rounded-xl border border-white/10">
             <input
               type="range"
               min="0.88"

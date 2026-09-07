@@ -427,7 +427,7 @@ export default function PebbleWidget() {
   return (
     <div className="flex flex-col h-full" id="pebble-stacker">
       {/* Header controls & stats */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-5 bg-slate-900/40 border-b border-slate-900 rounded-t-3xl">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-5 glass-strong border-b border-white/10 rounded-t-[1.75rem]">
         <div className="flex items-center gap-3">
           <div className="p-2.5 bg-emerald-500/10 rounded-xl">
             <Layers className="w-5 h-5 text-emerald-400" />
@@ -439,14 +439,14 @@ export default function PebbleWidget() {
         </div>
 
         <div className="flex gap-2">
-          <div className="px-3 py-1 bg-slate-950/60 text-[11px] font-medium border border-slate-900 rounded-lg flex items-center gap-2 text-slate-200">
+          <div className="px-3 py-1 bg-white/8 text-[11px] font-medium border border-white/10 rounded-lg flex items-center gap-2 text-slate-200">
             <Award className="w-3.5 h-3.5 text-yellow-400" /> Record stack: <span className="font-bold text-emerald-400 font-mono">{highPebbleStack} stones</span>
           </div>
 
           <button
             onClick={clearAltar}
             disabled={isTumbling}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-950/60 hover:bg-slate-900/80 text-neutral-200 text-xs font-semibold rounded-lg border border-slate-900 transition-colors cursor-pointer disabled:opacity-40"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/8 hover:bg-white/14 text-neutral-200 text-xs font-semibold rounded-lg border border-white/10 transition-colors cursor-pointer disabled:opacity-40"
           >
             <RotateCcw className="w-3.5 h-3.5" /> Clear Stack
           </button>
@@ -456,7 +456,7 @@ export default function PebbleWidget() {
       {/* Physics Stage Frame */}
       <div 
         ref={containerRef}
-        className="relative bg-neutral-950 rounded-b-2xl overflow-hidden select-none border-x border-b border-slate-900 h-[360px] flex items-center justify-center cursor-move touch-none"
+        className="relative bg-neutral-950 rounded-b-2xl overflow-hidden select-none border-x border-b border-white/10 h-[360px] flex items-center justify-center cursor-move touch-none"
       >
         <canvas
           ref={canvasRef}
@@ -468,7 +468,7 @@ export default function PebbleWidget() {
         />
 
         {/* Floating Stability indicators */}
-        <div className="absolute top-4 left-4 flex flex-col gap-1.5 pointer-events-none p-3.5 bg-slate-950/90 rounded-xl border border-slate-900 min-w-[130px] shadow-2xl">
+        <div className="absolute top-4 left-4 flex flex-col gap-1.5 pointer-events-none p-3.5 bg-black/50 rounded-xl border border-white/10 min-w-[130px] shadow-2xl">
           <span className="text-[10px] text-slate-400 font-sans uppercase tracking-widest leading-none">
             Stack Stability
           </span>
@@ -499,14 +499,14 @@ export default function PebbleWidget() {
         )}
 
         {/* Small stacker instructions overlay */}
-        <div className="absolute bottom-4 left-4 flex gap-1 items-center px-1.5 py-0.5 pointer-events-none bg-slate-950/75 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-slate-900">
+        <div className="absolute bottom-4 left-4 flex gap-1 items-center px-1.5 py-0.5 pointer-events-none bg-black/40 rounded text-[9px] text-slate-400 tracking-wide select-none uppercase font-mono border border-white/10">
           <Info className="w-3 h-3 text-emerald-400" />
           Move mouse/finger to align | Tap anywhere to drop &amp; stack precisely!
         </div>
       </div>
 
       {/* Rock Spawn Altar Tray Bottom Panel */}
-      <div className="mt-4 p-5 bg-slate-950/50 border border-slate-900/60 rounded-2xl flex flex-col gap-3">
+      <div className="mt-4 p-5 glass rounded-2xl flex flex-col gap-3">
         <span className="block text-xs font-semibold text-slate-300 tracking-wide uppercase font-sans">
           Select Stone Geometry to stack
         </span>
@@ -517,7 +517,7 @@ export default function PebbleWidget() {
               onClick={() => spawnStone(tmpl)}
               disabled={heldStone !== null || isTumbling}
               className={`p-3 rounded-xl border text-center transition-all flex flex-col items-center justify-center gap-2 relative overflow-hidden group py-4 ${
-                heldStone ? 'opacity-40 cursor-not-allowed bg-slate-950/20 border-slate-950' : 'bg-slate-900/40 border-slate-800 hover:border-slate-700/80 cursor-pointer'
+                heldStone ? 'opacity-40 cursor-not-allowed bg-white/4 border-white/8' : 'bg-white/6 border-white/10 hover:border-white/20 cursor-pointer'
               }`}
             >
               {/* Pebble Mini Shape Vector preview */}
